@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.util.Scanner;
 
 public class Matrices {
    public  static void main(String[] args) {
@@ -10,9 +11,25 @@ public class Matrices {
    }
 
     private static void sumaSubmatriz(int[][] matriz) {
-        int suma = 0;
+       Scanner sc = new Scanner(System.in);
 
+       System.out.print (" Introduce la fila superior ");
+       int filaSuperior = sc.nextInt() -1;
+       System.out.print (" Introduce la columna superior ");
+       int columnaSuperior = sc.nextInt() -1;
+       System.out.print (" Introduce la fila inferior ");
+       int filaInferior = sc.nextInt() -1;
+       System.out.print (" Introduce la columna inferior ");
+       int columnaInferior = sc.nextInt() -1;
 
+       int suma = 0;
+
+       for (int i = filaSuperior; i <= filaInferior; i++) {
+            for (int j = columnaSuperior; j <= columnaInferior; j++) {
+                suma += matriz[i][j];
+            }
+       }
+        System.out.println("\n La suma de la submatriz es: " + suma);
     }
 
     private static void inicializarMatriz(int[][] matriz) {
