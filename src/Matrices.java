@@ -6,7 +6,14 @@ public class Matrices {
        int [] [] matriz = new int[5][5];
 
         inicializarMatriz(matriz);
+        sumaSubmatriz(matriz);
    }
+
+    private static void sumaSubmatriz(int[][] matriz) {
+        int suma = 0;
+
+
+    }
 
     private static void inicializarMatriz(int[][] matriz) {
         for (int i = 0; i < matriz.length; i++) {
